@@ -1,8 +1,6 @@
 package com.example.qdq.dragger2demo.component;
 
-import com.example.qdq.dragger2demo.module.AppModule;
-import com.example.qdq.dragger2demo.module.GsonModule;
-import com.example.qdq.dragger2demo.module.ToastUtilModule;
+import com.example.qdq.dragger2demo.ui.BaseActivity;
 import com.example.qdq.dragger2demo.ui.MainActivity;
 
 import dagger.Component;
@@ -11,8 +9,10 @@ import dagger.Component;
  * Created by Administrator on 2017/9/1.
  */
 
-@Component(modules = {AppModule.class, ToastUtilModule.class, GsonModule.class})
+@Component()
 public interface AppComponent {
+
+    void injectActivity(BaseActivity activity);
 
     void injectMainActivity(MainActivity mainActivity);
 
